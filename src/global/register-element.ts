@@ -14,8 +14,6 @@ const components = [
   ElRadio
 ]
 export default function (app: App): void {
-  app.component(ElButton.name, ElButton)
-
   for (const component of components) {
     app.component(component.name, component)
   }
