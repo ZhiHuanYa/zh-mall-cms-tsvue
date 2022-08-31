@@ -74,7 +74,7 @@ class ZHRequest {
     )
   }
 
-  request<T>(config: ZHRequestConfig): Promise<T> {
+  request<T>(config: ZHRequestConfig<T>): Promise<T> {
     return new Promise((resolve, reject) => {
       // 1. 单个请求对config的处理
       if (config.interceptors?.requestInterceptor) {
@@ -109,19 +109,19 @@ class ZHRequest {
     })
   }
 
-  get<T>(config: ZHRequestConfig): Promise<T> {
+  get<T>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'GET' })
   }
 
-  post<T>(config: ZHRequestConfig): Promise<T> {
+  post<T>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'POST' })
   }
 
-  delete<T>(config: ZHRequestConfig): Promise<T> {
+  delete<T>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'DELETE' })
   }
 
-  patch<T>(config: ZHRequestConfig): Promise<T> {
+  patch<T>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'PATCH' })
   }
 }
