@@ -9,7 +9,9 @@ import {
   ElTabs,
   ElTabPane,
   ElAside,
-  ElIcon
+  ElIcon,
+  ElCheckbox,
+  ElLink
 } from 'element-plus/lib/components'
 
 const components = [
@@ -22,7 +24,9 @@ const components = [
   ElTabs,
   ElTabPane,
   ElAside,
-  ElIcon
+  ElIcon,
+  ElCheckbox,
+  ElLink
 ]
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
