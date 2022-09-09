@@ -34,8 +34,6 @@ class ZHRequest {
     // 2. 添加所有实例的拦截器
     this.instance.interceptors.request.use(
       (config) => {
-        console.log('所有实例都有的拦截器： 请求成功拦截')
-
         if (this.showLoading) {
           this.loading = ElLoading.service({
             lock: true,
@@ -47,13 +45,11 @@ class ZHRequest {
         return config
       },
       (err) => {
-        console.log('所有实例都有的拦截器： 请求失败拦截')
         return err
       }
     )
     this.instance.interceptors.response.use(
       (res) => {
-        console.log('所有实例都有的拦截器： 响应成功拦截')
         // 将loading移除
         this.loading?.close()
         const data = res.data
@@ -64,7 +60,6 @@ class ZHRequest {
         }
       },
       (err) => {
-        console.log('所有实例都有的拦截器： 响应失败拦截')
         // 实例： 判断不同的HttpErrorCode显示不同信息
         if (err.response.status == 404) {
           console.log(`404错误`)
@@ -93,7 +88,6 @@ class ZHRequest {
           if (config.interceptors?.responseInterceptor) {
             res = config.interceptors.responseInterceptor(res)
           }
-          console.log(res)
 
           // 2. 将showLoading设置为true，这样不会影响下一个请求
           this.showLoading = DEFALUT_LOADING

@@ -24,7 +24,11 @@ export default defineComponent({
       code: ''
     })
 
-    return { phone }
+    const loginAction = () => {
+      console.log('phone - loginAction')
+    }
+
+    return { phone, loginAction }
   }
 })
 </script>
