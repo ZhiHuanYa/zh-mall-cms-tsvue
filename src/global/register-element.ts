@@ -14,7 +14,15 @@ import {
   ElContainer,
   ElHeader,
   ElMain,
-  ElAside
+  ElAside,
+  ElMenu,
+  ElMenuItem,
+  ElSubMenu,
+  ElMenuItemGroup,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
+  ElAvatar
 } from 'element-plus/lib/components'
 
 const components = [
@@ -32,7 +40,15 @@ const components = [
   ElContainer,
   ElHeader,
   ElMain,
-  ElAside
+  ElAside,
+  ElMenu,
+  ElMenuItem,
+  ElSubMenu,
+  ElMenuItemGroup,
+  ElDropdown,
+  ElDropdownMenu,
+  ElDropdownItem,
+  ElAvatar
 ]
 
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
