@@ -13,7 +13,8 @@ module.exports = {
         },
         changeOrigin: true
       }
-    }
+    },
+    historyApiFallback: true
   },
   // 2. 配置方式二： 和webpack属性完全一致，最后进行合并
   configureWebpack: {
