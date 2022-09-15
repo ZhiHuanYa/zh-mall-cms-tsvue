@@ -1,9 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 import localCache from '@/utils/cache'
-import { mapMenusToRoutes } from '@/utils/map-menus'
-import store from '@/store'
-import { IStoreType } from '@/store/types'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -39,14 +36,6 @@ router.beforeEach((to) => {
     if (!token) {
       return '/login'
     }
-
-    // userMenus => routes
-    const userMenus = (store.state as IStoreType).login.userMenus
-    const routes = mapMenusToRoutes(userMenus)
-    // 将routes => router.main.children
-    routes.forEach((route) => {
-      router.addRoute('main', route)
-    })
   }
 })
 

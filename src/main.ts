@@ -13,7 +13,7 @@ const app = createApp(App)
 
 // 局部注册
 app.use(registerApp)
-app.use(router)
 app.use(store)
 setupStore()
+app.use(router)
 app.mount('#app')
