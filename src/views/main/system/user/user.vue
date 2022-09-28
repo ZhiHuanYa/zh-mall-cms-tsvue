@@ -1,25 +1,49 @@
 <template>
   <div class="user">
-    <div class="serach">
-      <zh-form class="zh-form" v-bind="searchFormConfig" />
-    </div>
-    <div class="content"></div>
+    <page-search
+      :searchFormConfig="searchFormConfig"
+      @resetBtnClick="handleResetBtnClick"
+      @queryBtnClick="handleQueryBtnClick"
+    />
+    <page-content
+      ref="pageContentRef"
+      :contentTableConfig="contentTableConfig"
+      pageName="users"
+    ></page-content>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import ZhForm from '@/base-ui/form'
+import { defineComponent, ref } from 'vue'
+
+import PageSearch from '@/components/page-search'
+import PageContent from '@/components/page-content'
+
 import { searchFormConfig } from './config/search.config'
+import { contentTableConfig } from './config/content.config'
+
+import { usePageSearch } from '@/hooks/usePageSearch'
 
 export default defineComponent({
   name: 'user',
   components: {
-    ZhForm
+    PageSearch,
+    PageContent
   },
   setup() {
+    const [
+      //
+      pageContentRef,
+      handleResetBtnClick,
+      handleQueryBtnClick
+    ] = usePageSearch()
+
     return {
-      searchFormConfig
+      contentTableConfig,
+      searchFormConfig,
+      pageContentRef,
+      handleResetBtnClick,
+      handleQueryBtnClick
     }
   }
 })

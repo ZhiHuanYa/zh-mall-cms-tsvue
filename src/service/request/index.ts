@@ -103,19 +103,19 @@ class ZHRequest {
     })
   }
 
-  get<T>(config: ZHRequestConfig<T>): Promise<T> {
+  get<T = any>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'GET' })
   }
 
-  post<T>(config: ZHRequestConfig<T>): Promise<T> {
+  post<T = any>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'POST' })
   }
 
-  delete<T>(config: ZHRequestConfig<T>): Promise<T> {
+  delete<T = any>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'DELETE' })
   }
 
-  patch<T>(config: ZHRequestConfig<T>): Promise<T> {
+  patch<T = any>(config: ZHRequestConfig<T>): Promise<T> {
     return this.request<T>({ ...config, method: 'PATCH' })
   }
 }

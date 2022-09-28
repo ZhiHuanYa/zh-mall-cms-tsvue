@@ -1,4 +1,3 @@
-import { App } from 'vue'
 import {
   ElButton, //
   ElForm,
@@ -27,7 +26,12 @@ import {
   ElCol,
   ElSelect,
   ElOption,
-  ElDatePicker
+  ElDatePicker,
+  ElBreadcrumb,
+  ElBreadcrumbItem,
+  ElTable,
+  ElTableColumn,
+  ElPagination
 } from 'element-plus/lib/components'
 
 const components = [
@@ -58,10 +62,17 @@ const components = [
   ElCol,
   ElSelect,
   ElOption,
-  ElDatePicker
+  ElDatePicker,
+  ElBreadcrumb,
+  ElBreadcrumbItem,
+  ElTable,
+  ElTableColumn,
+  ElPagination
 ]
 
+import { App } from 'vue'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import 'element-plus/theme-chalk/index.css'
 
 export default function (app: App): void {
   for (const component of components) {

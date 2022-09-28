@@ -1,5 +1,6 @@
 import zhRequest from '../index'
-import { IAccount, IDateType, ILoginResult } from './types'
+import { IAccount, ILoginResult } from './types'
+import { IDateType } from '../types'
 
 enum LoginAPI {
   AccountLogin = '/login',
