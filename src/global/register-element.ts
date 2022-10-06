@@ -31,7 +31,11 @@ import {
   ElBreadcrumbItem,
   ElTable,
   ElTableColumn,
-  ElPagination
+  ElPagination,
+  ElImage,
+  ElDialog,
+  ElTree,
+  ElCard
 } from 'element-plus/lib/components'
 
 const components = [
@@ -67,7 +71,11 @@ const components = [
   ElBreadcrumbItem,
   ElTable,
   ElTableColumn,
-  ElPagination
+  ElPagination,
+  ElImage,
+  ElDialog,
+  ElTree,
+  ElCard
 ]
 
 import { App } from 'vue'

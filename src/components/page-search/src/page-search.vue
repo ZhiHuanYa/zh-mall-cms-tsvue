@@ -37,7 +37,7 @@ export default defineComponent({
     const formItems = props.searchFormConfig?.formItems ?? []
     const formOriginData: any = {}
     for (const item of formItems) {
-      formOriginData[item.filed] = ''
+      formOriginData[item.field] = ''
     }
 
     const formData = ref(formOriginData)

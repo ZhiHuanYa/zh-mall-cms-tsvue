@@ -1,7 +1,7 @@
 import { ITable } from '@/base-ui/table'
 
 export const contentTableConfig: ITable = {
-  title: '权限列表',
+  title: '角色',
   propList: [
     { prop: 'name', label: '角色名', minWidth: '100' },
     { prop: 'intro', label: '权限介绍', minWidth: '100' },

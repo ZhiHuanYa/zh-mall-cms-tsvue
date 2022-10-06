@@ -1,7 +1,7 @@
 type IFormType = 'input' | 'password' | 'select' | 'datepicker'
 
 export interface IFormItem {
-  filed: string
+  field: string
   type: IFormType
   label: string
   rules?: any[]
@@ -10,9 +10,11 @@ export interface IFormItem {
   options?: any[]
   // 针对特殊的属性
   otherOptions?: any
+  isHidden?: boolean
 }
 
 export interface IForm {
+  title?: string
   formItems: IFormItem[]
   labelWidth?: string
   colLayout?: any
