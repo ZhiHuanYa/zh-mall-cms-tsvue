@@ -35,7 +35,8 @@ import {
   ElImage,
   ElDialog,
   ElTree,
-  ElCard
+  ElCard,
+  ElConfigProvider
 } from 'element-plus/lib/components'
 
 const components = [
@@ -75,7 +76,8 @@ const components = [
   ElImage,
   ElDialog,
   ElTree,
-  ElCard
+  ElCard,
+  ElConfigProvider
 ]
 
 import { App } from 'vue'
