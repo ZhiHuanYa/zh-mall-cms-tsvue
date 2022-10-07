@@ -6,8 +6,7 @@ import './assets/css/index.less'
 import { registerApp } from './global'
 
 import router from './router'
-import store from './store'
-import { setupStore } from './store'
+import store, { setupStore } from './store'
 
 //  Added non-passive event listener to a scroll-blocking ‘touchmove’ event.
 import 'default-passive-events'
@@ -15,11 +14,6 @@ import 'default-passive-events'
 const app = createApp(App)
 
 // 局部注册
-
-app.use(registerApp)
-
-app.use(store)
+registerApp(app)
 setupStore()
-app.use(router)
-
-app.mount('#app')
+app.use(store).use(router).mount('#app')
