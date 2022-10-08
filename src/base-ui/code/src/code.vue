@@ -1,9 +1,7 @@
 <template>
   <div class="zh-code">
     <pre class="bg">
-      <code :class="'language'+language" v-html="highlightedCode">
-
-      </code>
+      <code :class="'language'+language" v-html="highlightedCode"/>
     </pre>
   </div>
 </template>

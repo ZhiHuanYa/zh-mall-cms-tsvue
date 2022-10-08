@@ -36,7 +36,11 @@ import {
   ElDialog,
   ElTree,
   ElCard,
-  ElConfigProvider
+  ElConfigProvider,
+  ElDescriptions,
+  ElDescriptionsItem,
+  ElTag,
+  ElTooltip
 } from 'element-plus/lib/components'
 
 const components = [
@@ -77,7 +81,11 @@ const components = [
   ElDialog,
   ElTree,
   ElCard,
-  ElConfigProvider
+  ElConfigProvider,
+  ElDescriptions,
+  ElDescriptionsItem,
+  ElTag,
+  ElTooltip
 ]
 
 import { App } from 'vue'
