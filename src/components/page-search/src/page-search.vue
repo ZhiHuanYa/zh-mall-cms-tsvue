@@ -1,9 +1,7 @@
 <template>
   <div class="page-search">
     <zh-form v-model="formData" class="zh-form" v-bind="searchFormConfig">
-      <template #header>
-        <h1 class="header">高级检索</h1>
-      </template>
+      <template #header> 头部插槽 </template>
       <template #footer>
         <div class="handle-btns">
           <el-button icon="Refresh" @click="handleResetClick">重置</el-button>
